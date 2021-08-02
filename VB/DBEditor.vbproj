@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85E38774-9682-417D-8DAE-A3B8BC7CF2F5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>DBEditor.My.MyApplication</StartupObject>
+    <RootNamespace>DBEditor</RootNamespace>
+    <AssemblyName>DBEditor</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>database.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>DBEditor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>DBEditor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Nilaccra\Accris\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Data.Odbc" />
+    <Import Include="System.Data.OracleClient" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\TransferEntity.vb" />
+    <Compile Include="Controls\SQLPage.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AskGoogleForm.Designer.vb">
+      <DependentUpon>AskGoogleForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AskGoogleForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\CollectionBase.vb" />
+    <Compile Include="Base\Database\Column.vb" />
+    <Compile Include="Base\Database\ColumnCollection.vb" />
+    <Compile Include="Base\Database\DataSource.vb" />
+    <Compile Include="Base\Database\Index.vb" />
+    <Compile Include="Base\Database\IndexCollection.vb" />
+    <Compile Include="Base\Database\Sequence.vb" />
+    <Compile Include="Base\Database\SequenceCollection.vb" />
+    <Compile Include="Base\Database\Table.vb" />
+    <Compile Include="Base\Database\TableCollection.vb" />
+    <Compile Include="Forms\EditConnections.Designer.vb">
+      <DependentUpon>EditConnections.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditConnections.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditorForm.Designer.vb">
+      <DependentUpon>EditorForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditorForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FirstForm.Designer.vb">
+      <DependentUpon>FirstForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FirstForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageForm.Designer.vb">
+      <DependentUpon>MessageForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MessageForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Utility.vb" />
+    <Compile Include="Forms\SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\Column\NewColumn.Designer.vb">
+      <DependentUpon>NewColumn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\Column\NewColumn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\Connection\Step1.Designer.vb">
+      <DependentUpon>Step1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\Connection\Step1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Container.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Container.Designer.vb">
+      <DependentUpon>Container.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Wizards\Connection\Step2.Designer.vb">
+      <DependentUpon>Step2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\Connection\Step2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\Connection\Step3.Designer.vb">
+      <DependentUpon>Step3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\Connection\Step3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\Export\Step1.Designer.vb">
+      <DependentUpon>Step1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\Export\Step1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\Export\Step2.Designer.vb">
+      <DependentUpon>Step2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\Export\Step2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\Management\CorrectTablespace.Designer.vb">
+      <DependentUpon>CorrectTablespace.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\Management\CorrectTablespace.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\Management\StructuralDifference\CompareStep1.Designer.vb">
+      <DependentUpon>CompareStep1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\Management\StructuralDifference\CompareStep1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\Management\StructuralDifference\Result.Designer.vb">
+      <DependentUpon>Result.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\Management\StructuralDifference\Result.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\About.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AskGoogleForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AskGoogleForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditorForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EditorForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FirstForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FirstForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MessageForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Connection\Step1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Step1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Container.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Container.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Connection\Step2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Step2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Connection\Step3.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Step3.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ag.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\arrow.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\EntityFormSave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\save.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\database.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\nav_logo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\google.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\EditConnections.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EditConnections.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\New.png" />
+    <EmbeddedResource Include="Forms\SplashScreen1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Column\NewColumn.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewColumn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Export\Step1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Step1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Export\Step2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Step2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Management\CorrectTablespace.resx">
+      <DependentUpon>CorrectTablespace.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Management\StructuralDifference\CompareStep1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CompareStep1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Management\StructuralDifference\Result.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Result.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="256.png" />
+    <Content Include="database.ico" />
+    <None Include="Resources\YT%25DC_RE[1]1.jpg" />
+    <None Include="Resources\YT%25DC_RE[1].jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
